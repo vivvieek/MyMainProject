@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 //MongoDB Atlas connect
-mongoose.connect('mongodb+srv://officialsabarinarayan:9447103050@cluster0.buyzcu4.mongodb.net/finalproject', {
+mongoose.connect('mongodb+srv://spvivekbabu:fsda123@cluster0.h7vuisq.mongodb.net/mainproject', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
