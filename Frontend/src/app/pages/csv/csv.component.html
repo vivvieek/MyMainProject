@@ -1,0 +1,17 @@
+<!-- Upload Input -->
+<div class="csvbox1 bg-light p-5 m-5 mx-auto col-10 col-md-8 col-lg-6">
+  <div class="text-center headingdiv bg-primary-subtle fs-3 font-monospace">
+    <span>Upload CSV File</span>
+  </div>
+  <br><hr><br>
+  <div class="custom-file csvbox2 p-4">
+    <input type="file" accept=".csv" class="custom-file-input" id="inputGroupFile01" (change)="onFileChange($event)">
+    <label class="custom-file-label" for="inputGroupFile01"></label>
+  </div><br><hr>
+  <div class="d-flex justify-content-evenly">
+    <button class="button-57" role="button" (click)="uploadFile()"><span class="text">Upload</span><span><i class="bi bi-cloud-upload fa-2x "></i></span></button>
+  </div><br>
+  <div class="d-flex justify-content-evenly">
+    <span *ngIf="message">Upload Status : {{ message }}</span>
+  </div>
+</div>

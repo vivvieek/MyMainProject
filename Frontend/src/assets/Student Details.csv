@@ -1,0 +1,3 @@
+id,name,course,project,batch,status,placement
+csvfile@upload.com,CSV,FSD,ICTAK,Mar-23,Completed,Placed
+another@upload.com,csv2,MEAN,ICTAK,May-22,Completed,Notplaced

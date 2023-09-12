@@ -1,0 +1,31 @@
+<!-- user details in card form -->
+<div class="container text-center mt-5">
+  <div class="row">
+    <div class="col" *ngFor="let user of users">
+      <div class="card border mb-2" style="width: 19rem;">
+        <div class="icon">
+          <img src="assets/person_circle_icon_159926.png" class="card-img-top" alt="icon">
+        </div>
+        <hr>
+        <div class="card-body">
+          <div class="bg-body-tertiary p-2 border">
+            <h5 class="card-title">{{ user.role }}</h5>
+            <p class="card-text">Name: {{ user.name }}</p>
+            <p class="card-text">Email: {{ user.email }}</p>
+          </div>
+          <hr>
+          <hr>
+          <div class="button d-flex justify-content-evenly">
+            <!-- enabled -->
+            <button *ngIf="user.role!=='Admin'" [routerLink]="'/home/edituser/' + user._id" class="button-62 btn btn-outline-primary"><i class="bi bi-pencil-square"></i> Edit</button>
+            <button *ngIf="user.role!=='Admin'" class="button-63 btn btn-outline-danger" (click)="deleteUser(user._id)"><i class="bi bi-trash3-fill"></i> Delete</button>
+            <!-- disabled if admin -->
+            <!-- id: admin@email.com pass: admin123 -->
+            <button *ngIf="user.role=='Admin'" [routerLink]="'/home/edituser/' + user._id" class="button-62 btn btn-outline-primary" disabled><i class="bi bi-pencil-square"></i> Edit</button>
+            <button *ngIf="user.role=='Admin'" class="button-63 btn btn-outline-danger" disabled><i class="bi bi-trash3-fill"></i> Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

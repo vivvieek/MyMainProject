@@ -1,0 +1,33 @@
+<table class="table table-primary table-hover table-striped table-sm">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Course</th>
+      <th scope="col">Project</th>
+      <th scope="col">Batch</th>
+      <th scope="col">Status</th>
+      <th scope="col">Placement</th>
+      <th scope="col">Edit</th>
+      <th *ngIf="isDeletebutton" scope="col">Delete</th>
+    </tr>
+  </thead>
+  <br>
+  <tbody>
+    <tr *ngFor="let item of studdetail">
+      <td scope="row">{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.course}}</td>
+      <td>{{item.project}}</td>
+      <td>{{item.batch}}</td>
+      <td>{{item.status}}</td>
+      <td>{{item.placement}}</td>
+      <td><a (click)="edititem(item._id)"><i class="bi bi-pencil-square text-primary"></i></a></td>
+      <td><a *ngIf="isDeletebutton" (click)="delitem(item._id)"><i class="bi bi-trash3-fill text-danger"></i></a></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<div >
+  <button *ngIf="isDeletebutton" type="button" routerLink="/home/addstuds" class="btn btn-outline-success"><i class="bi bi-plus-circle"></i> Add New Student</button>
+</div>

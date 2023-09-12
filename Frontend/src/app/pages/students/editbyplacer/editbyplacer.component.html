@@ -1,0 +1,34 @@
+<!-- Reactive Form -->
+<form [formGroup]="editform" (ngSubmit)="onsubmit()">
+    <div class="cardform text-center bg-light p-5 m-5 mx-auto col-10 col-md-8 col-lg-6" style="width: 25rem;">
+        <div class="text-center headingdiv bg-primary-subtle fs-4 font-monospace">
+            <span>Placement Status</span>
+        </div>
+        <br>
+        <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        </div>
+        <br>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{item.id}}</li><br>
+        <li class="list-group-item">{{item.course}}</li><br>
+        <li class="list-group-item">{{item.project}}</li><br>
+        <li class="list-group-item">{{item.batch}}</li><br>
+        <li class="list-group-item">{{item.status}}</li><br>
+        </ul>
+        <div class="row g-3 align-items-center item">
+            <div>
+                <select id="placement" class="form-select item inputs" name="placement" formControlName="placement">
+                    <option value="" disabled selected>Placement</option>
+                    <option>Placed</option>
+                    <option>Job Seeking</option>
+                    <option>Not Interested</option>
+                </select>
+            </div>
+        </div><br>
+        <div class="card-body d-flex justify-content-evenly">
+            <button class="button-62" type="submit"><i class="bi bi-person-fill-up"></i> Update </button>
+            <button class="button-63" routerLink="/home/viewstuds"><i class="bi bi-x-circle fa-sm"></i> Cancel </button>
+        </div>
+    </div>
+</form> 
